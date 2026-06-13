@@ -1,0 +1,10 @@
+
+[font]
+size = 10
+normal = { family = "SFMono", style = "Regular" }
+
+[window]
+padding = { x = 33, y = 33 }
+
+[general]
+import = ["~/.cache/wal/alacritty.toml"]
