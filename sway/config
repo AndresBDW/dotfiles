@@ -5,7 +5,7 @@ floating_modifier $mod normal
 include ~/.cache/wal/colors-sway
 output * bg $wallpaper fill
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec foot
 bindsym $mod+q kill
 bindsym $mod+d exec wmenu-run
 bindsym $mod+Shift+r reload
