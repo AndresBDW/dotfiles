@@ -2,8 +2,7 @@ set $mod Mod4
 
 default_border none
 floating_modifier $mod normal
-include ~/.cache/wal/colors-sway
-output * bg $wallpaper fill
+output * bg ~/imagenes/wallpapers/wallpaper.png fill
 
 bindsym $mod+Return exec foot
 bindsym $mod+q kill
@@ -61,5 +60,5 @@ bar {
     }
 }
 
-exec wal -R
 exec autotiling
+exec openrc -U gui

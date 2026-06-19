@@ -8,6 +8,8 @@ export MAKEFLAGS=-j4
 export EDITOR=vim
 export XDG_RUNTIME_DIR=/home/diego/.cache/xdg-runtime
 export YACC=byacc
+export ENV=$HOME/.rc
+export $(dbus-launch)
 
 printf 'start wayland? '
 ! read -r || exec sway > /dev/null 2>&1
