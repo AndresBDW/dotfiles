@@ -2,7 +2,7 @@ set $mod Mod4
 
 default_border none
 floating_modifier $mod normal
-output * bg ~/imagenes/wallpapers/wallpaper.png fill
+output * bg ~/imagenes/wallpaper.jpg fill
 
 bindsym $mod+Return exec foot
 bindsym $mod+q kill
@@ -60,5 +60,5 @@ bar {
     }
 }
 
-exec autotiling
+exec i3flow
 exec openrc -U gui
