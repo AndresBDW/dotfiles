@@ -1,3 +1,0 @@
-read -r _b < ~/.config/okpal/sequences
-printf '%s' "$_b"
-unset _b

@@ -2,7 +2,7 @@ set $mod Mod4
 
 default_border none
 floating_modifier $mod normal
-output * bg ~/imagenes/wallpaper.jpg fill
+output * bg ~/imagenes/wallpaper.png fill
 
 bindsym $mod+Return exec foot
 bindsym $mod+q kill
@@ -30,10 +30,8 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 bindsym --locked XF86AudioMute exec amixer -c 0 set Master toggle
-bindsym --locked XF86AudioLowerVolume exec amixer -c 0 set Master 5%-
-bindsym --locked XF86AudioRaiseVolume exec amixer -c 0 set Master 5%+
-bindsym --locked XF86MonBrightnessUp exec brightnessctl set 10%+
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym --locked XF86AudioLowerVolume exec wpctl set-volume 60 5%- 
+bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume 60 5%+
 
 bindsym $mod+s exec grim -t png -c /home/diego/imagenes/capturas/screenshot-$(date +%Y%m%d-%H%M%S).png
 bindsym $mod+b splith
@@ -60,5 +58,5 @@ bar {
     }
 }
 
-exec i3flow
-exec openrc -U gui
+exec pipewire &
+exec autotiling
