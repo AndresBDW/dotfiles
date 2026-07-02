@@ -6,6 +6,10 @@ if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
     eval $(dbus-launch --sh-syntax --exit-with-session)
 fi
 
+if [[ ":$PATH:" != *":/home/diego/bin:"* ]]; then
+    export PATH="$PATH:$HOME/bin"
+fi
+
 alias ls='ls --color=auto --group-directories-first'
 alias pfetch='clear; pfetch'
 alias gfetch='clear; gfetch'
@@ -20,7 +24,6 @@ export PS1="-> "
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS="-j8"
-export PATH="$PATH:$HOME/bin"
 export EDITOR="vim"
 export VISUAL="vim"
 export YACC=byacc
