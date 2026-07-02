@@ -1,18 +1,31 @@
 # .bashrc
-[[ $- != *i* ]] && return
-alias ls='ls --color=auto'
 
-export PS1="[\u@\h \W]\$ "
+[[ $- != *i* ]] && return
+
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+    eval $(dbus-launch --sh-syntax --exit-with-session)
+fi
+
+alias ls='ls --color=auto --group-directories-first'
+alias pfetch='clear; pfetch'
+alias gfetch='clear; gfetch'
+alias fastfetch='clear; fastfetch'
+alias xi='sudo xbps-install'
+alias xu='sudo xbps-install -Su'
+alias xr='sudo xbps-remove'
+alias gj='git add .; git commit -m "update"; git push'
+
+export PS1="-> "
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS="-j8"
 export PATH="$PATH:$HOME/bin"
 export EDITOR="vim"
+export VISUAL="vim"
 export YACC=byacc
 export GTK_THEME="Adwaita:dark"
 export PF_INFO="ascii title os host kernel uptime pkgs memory wm shell editor palette"
-export $(dbus-launch)
-export GD_REPLAYS="/home/diego/.wine/drive_c/users/diego/AppData/Local/GeometryDash/geode/mods/eclipse.eclipse-menu/replays"
+export BROWSER="firefox"
 
 read -r _b < ~/.config/okpal/sequences
 printf '%s' "$_b"
