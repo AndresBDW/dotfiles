@@ -13,7 +13,7 @@ alias fastfetch='clear; fastfetch'
 alias xi='sudo xbps-install'
 alias xu='sudo xbps-install -Su'
 alias xr='sudo xbps-remove'
-alias gj='git add .; git commit -m "update"; git push'
+alias gj='git pull; git add .; git commit -m "update"; git push'
 
 export PS1="-> "
 export CFLAGS="-O3 -pipe -march=native"
