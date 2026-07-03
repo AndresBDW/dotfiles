@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cp ~/.config/sway/config ./sway/config
+cp ~/.config/foot/foot.ini ./foot/foot.ini
+cp ~/.bashrc ./home/.bashrc
+cp ~/.bash_profile ./home/.bash_profile
+cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs
+cp ~/.vimrc ./vim/.vimrc
+cp ~/.config/okpal . -r
+cp ~/imagenes/wallpaper.png ./wallpaper.png
