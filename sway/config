@@ -48,7 +48,7 @@ input type:keyboard {
 }
 
 bar {
-    position bottom
+    position top
     status_command i3status
     colors {
         statusline #ffffff
