@@ -33,3 +33,4 @@ export PF_INFO="ascii title os host kernel uptime pkgs memory wm shell editor pa
 export BROWSER="firefox"
 
 (cat ~/.config/okpal/sequences 2>/dev/null &)
+
