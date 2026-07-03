@@ -10,10 +10,16 @@ if [[ ":$PATH:" != *":/home/diego/bin:"* ]]; then
     export PATH="$PATH:$HOME/bin"
 fi
 
+f() {
+    fff "$@"
+    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+}
+
 alias ls='ls --color=auto --group-directories-first'
 alias pfetch='clear; pfetch'
 alias gfetch='clear; gfetch'
 alias fastfetch='clear; fastfetch'
+alias neofetch='clear; neofetch'
 alias xi='sudo xbps-install'
 alias xu='sudo xbps-install -Su'
 alias xr='sudo xbps-remove'
@@ -21,7 +27,7 @@ alias xo='sudo xbps-remove -o'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
 alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
 
-export PS1="-> "
+export PS1="➜ "
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS="-j8"
