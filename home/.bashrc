@@ -18,7 +18,7 @@ alias xi='sudo xbps-install'
 alias xu='sudo xbps-install -Su'
 alias xr='sudo xbps-remove'
 alias xo='sudo xbps-remove -o'
-alias gj='git pull; git add .; git commit -m "update: $(date +%Y-%m-%d)"; git push'
+alias gj='git pull; git add .; git commit -m "update: $(date +%Y-%m-%d %H:%M)"; git push'
 alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
 
 export PS1="-> "
@@ -33,4 +33,3 @@ export PF_INFO="ascii title os host kernel uptime pkgs memory wm shell editor pa
 export BROWSER="firefox"
 
 (cat ~/.config/okpal/sequences 2>/dev/null &)
-
