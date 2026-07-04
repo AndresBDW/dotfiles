@@ -24,10 +24,12 @@ alias xi='sudo xbps-install'
 alias xu='sudo xbps-install -Su'
 alias xr='sudo xbps-remove'
 alias xo='sudo xbps-remove -o'
+alias xs='sudo xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
 alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
 
-export PS1="➜ "
+#export PS1="➜ "
+export PS1="-> "
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS="-j8"
