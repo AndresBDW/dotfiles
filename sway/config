@@ -2,7 +2,8 @@ set $mod Mod4
 
 default_border none
 floating_modifier $mod normal
-output * bg ~/imagenes/wallpaper.jpg fill
+#output * bg ~/imagenes/wallpaper.jpg fill
+output * bg #3366a3 solid_color
 
 bindsym $mod+Return exec foot
 bindsym $mod+q kill
@@ -58,5 +59,6 @@ bar {
     }
 }
 
-exec pipewire &
+exec mako
+exec pipewire 
 exec autotiling

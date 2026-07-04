@@ -7,4 +7,5 @@ cp ~/.bash_profile ./home/.bash_profile
 cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs
 cp ~/.vimrc ./vim/.vimrc
 cp ~/.config/okpal . -r
+cp ~/.config/mako/config ./mako/config
 rm ./wallpaper.jpg 2>/dev/null; cp ~/imagenes/wallpaper.png ./wallpaper.png 2>/dev/null|| rm ./wallpaper.png 2>/dev/null; cp ~/imagenes/wallpaper.jpg ./wallpaper.jpg

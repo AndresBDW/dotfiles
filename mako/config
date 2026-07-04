@@ -1,0 +1,24 @@
+text-color=#BFBFBFFF
+border-color=#333333FF
+progress-color=#3366A3
+background-color=#242424FF
+default-timeout=4000
+width=360
+height=150
+padding=16
+margin=12
+border-size=1
+border-radius=0
+outer-margin=10
+anchor=top-right
+layer=overlay
+font=gallant12x22 10
+
+[app-name=Spotify]
+invisible=1
+
+[mode=do-not-disturb]
+invisible=true
+
+[mode=do-not-disturb app-name=notify-send]
+invisible=false
