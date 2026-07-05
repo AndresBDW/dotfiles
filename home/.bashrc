@@ -23,10 +23,9 @@ f() {
 }
 
 alias ls='ls --color=auto --group-directories-first'
-alias pfetch='clear; pfetch'
+alias qfetch='clear; qfetch'
 alias gfetch='clear; gfetch'
 alias fastfetch='clear; fastfetch'
-alias neofetch='clear; neofetch'
 alias xi='sudo xbps-install'
 alias xu='sudo xbps-install -Su'
 alias xr='sudo xbps-remove'

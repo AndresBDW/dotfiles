@@ -4,4 +4,4 @@
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
 printf 'start wayland? '
-! read -r || exec sway
+! read -r || exec dwl
