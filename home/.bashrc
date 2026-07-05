@@ -6,6 +6,13 @@ if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
     eval $(dbus-launch --sh-syntax --exit-with-session)
 fi
 
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+        XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir"
+
+        mkdir -pm 0700 "$XDG_RUNTIME_DIR"
+        export XDG_RUNTIME_DIR
+fi
+
 if [[ ":$PATH:" != *":/home/diego/bin:"* ]]; then
     export PATH="$PATH:$HOME/bin"
 fi
@@ -20,11 +27,11 @@ alias pfetch='clear; pfetch'
 alias gfetch='clear; gfetch'
 alias fastfetch='clear; fastfetch'
 alias neofetch='clear; neofetch'
-alias xi='doas xbps-install'
-alias xu='doas xbps-install -Su'
-alias xr='doas xbps-remove'
-alias xo='doas xbps-remove -o'
-alias xs='doas xbps-query -Rs'
+alias xi='sudo xbps-install'
+alias xu='sudo xbps-install -Su'
+alias xr='sudo xbps-remove'
+alias xo='sudo xbps-remove -o'
+alias xs='sudo xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
 alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
 
