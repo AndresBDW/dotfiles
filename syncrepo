@@ -1,7 +1,6 @@
 #!/bin/sh
 
 cp ~/src/dwl/config.def.h ./dwl/config.def.h
-cp ~/src/dwl/config.h ./dwl/config.h
 cp ~/src/dwl/*.patch ./dwl/
 cp ~/.config/foot/foot.ini ./foot/foot.ini
 cp ~/.bashrc ./home/.bashrc

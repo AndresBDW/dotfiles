@@ -4,4 +4,4 @@
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
 printf 'start wayland? '
-! read -r || exec dwl
+! read -r || exec dwl-start >/dev/null 2>&1
