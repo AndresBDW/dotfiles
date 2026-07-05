@@ -2,4 +2,4 @@
 
 **screenshot:**
 
-![actualscreenshot](https://github.com/user-attachments/assets/493aa85e-1466-4ded-912d-2268ab5318a4)
+![actualscreenshot](https://github.com/user-attachments/assets/f189a5eb-2cdf-455c-bf3c-42d2314504dd)
