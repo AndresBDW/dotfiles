@@ -148,14 +148,16 @@ static const char *menucmd[] = { "wmenu-run", "-N", "#282828", "-n", "#bbbbbb", 
 static const char *volup[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
 static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
 static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
-static const char *screenshot[] = { "scr", NULL };
+static const char *screenshotfull[] = { "scr", "full", NULL };
+static const char *screenshotgeometry[] = { "scr", "geometry", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: 2 -> at, etc. */
 	/* modifier                  key                  function          argument */
 	{ MODKEY,                    XKB_KEY_d,           spawn,            {.v = menucmd} },
 	{ MODKEY,                    XKB_KEY_Return,      spawn,            {.v = termcmd} },
-	{ MODKEY,		     XKB_KEY_s,	          spawn,            {.v = screenshot} },
+	{ MODKEY,		     XKB_KEY_s,	          spawn,            {.v = screenshotfull} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_s,		  spawn,            {.v = screenshotgeometry} },
 	{ MODKEY,                    XKB_KEY_b,           togglebar,        {0} },
 	{ MODKEY,                    XKB_KEY_j,           focusstack,       {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,           focusstack,       {.i = -1} },
