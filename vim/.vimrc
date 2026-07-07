@@ -86,3 +86,4 @@ if has('langmap') && exists('+langremap')
 endif
 
 set mouse=
+set number

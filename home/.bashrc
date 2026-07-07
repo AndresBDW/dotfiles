@@ -25,6 +25,7 @@ f() {
 alias ls='ls --color=auto --group-directories-first'
 alias qfetch='clear; qfetch'
 alias gfetch='clear; gfetch'
+alias vfetch='clear; vfetch'
 alias fastfetch='clear; fastfetch'
 alias xi='sudo xbps-install'
 alias xu='sudo xbps-install -Su'
@@ -34,7 +35,6 @@ alias xs='sudo xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
 alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
 
-#export PS1="➜ "
 export PS1="-> "
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="$CFLAGS"

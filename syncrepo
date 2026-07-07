@@ -1,7 +1,11 @@
 #!/bin/sh
 
 cp ~/src/dwl/config.def.h ./dwl/config.def.h
-cp ~/src/dwl/*.patch ./dwl/
+cp ~/src/dwl/*.patch ./dwl/ 2>/dev/null
+cp ~/src/dwl/*.diff ./dwl/ 2>/dev/null
+cp ~/src/slstatus/config.def.h ./slstatus/config.def.h
+cp ~/src/slstatus/*.patch ./slstatus/ 2>/dev/null
+cp ~/src/slstatus/*.diff ./slstatus/ 2>/dev/null
 cp ~/.config/foot/foot.ini ./foot/foot.ini
 cp ~/.bashrc ./home/.bashrc
 cp ~/.bash_profile ./home/.bash_profile

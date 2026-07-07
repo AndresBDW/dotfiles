@@ -1,3 +1,7 @@
+#define XF86XK_AudioRaiseVolume 0x1008ff13
+#define XF86XK_AudioLowerVolume 0x1008ff11
+#define XF86XK_AudioMute        0x1008ff12
+
 /* Taken from https://github.com/djpohly/dwl/issues/466 */
 #define COLOR(hex)    { ((hex >> 24) & 0xFF) / 255.0f, \
                         ((hex >> 16) & 0xFF) / 255.0f, \
@@ -6,18 +10,25 @@
 /* appearance */
 static const int sloppyfocus               = 1;  /* focus follows mouse */
 static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will disable idle tracking even if it's surface isn't visible  */
-static const unsigned int borderpx         = 0;  /* border pixel of windows */
+static const int smartgaps                 = 0;
+static const int monoclegaps               = 0;
+static const unsigned int gappih           = 10;
+static const unsigned int gappiv           = 10;
+static const unsigned int gappoh           = 10;
+static const unsigned int gappov           = 10;
+static const unsigned int borderpx         = 1;  /* border pixel of windows */
 static const int showbar                   = 1; /* 0 means no bar */
 static const int topbar                    = 1; /* 0 means bottom bar */
-static const char *fonts[]                 = {"monospace:size=10"};
+static const int centeredtitle             = 1; /* 1 means centered title */
+static const char *fonts[]                 = {"SFMono:size=10"};
 static const float rootcolor[]             = COLOR(0x000000ff);
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
 static const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f}; /* You can also use glsl colors */
 static uint32_t colors[][3]                = {
 	/*               fg          bg          border    */
-	[SchemeNorm] = { 0xbbbbbbff, 0x222222ff, 0x444444ff },
-	[SchemeSel]  = { 0xeeeeeeff, 0x005577ff, 0x005577ff },
-	[SchemeUrg]  = { 0,          0,          0x770000ff },
+	[SchemeNorm] = { 0xebdbb2ff, 0x282828ff, 0x282828ff },
+	[SchemeSel]  = { 0xebdbb2ff, 0x98971aff, 0x98971aff },
+	[SchemeUrg]  = { 0xebdbb2ff, 0xff0000ff, 0xff0000ff },
 };
 
 /* tagging */
@@ -133,17 +144,18 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "wmenu-run", "-l", "10", NULL };
+static const char *menucmd[] = { "wmenu-run", "-N", "#282828", "-n", "#bbbbbb", "-S", "#98971a", "-s", "#ebdbb2", "-l", "10", NULL };
 static const char *volup[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
 static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
 static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
-static const char *screenshot[] = { "sh", "-c", "grim -t png -c /home/diego/imagenes/capturas/screenshot-$(date +%Y%m%d-%H%M%S).png", NULL };
+static const char *screenshot[] = { "scr", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: 2 -> at, etc. */
 	/* modifier                  key                  function          argument */
 	{ MODKEY,                    XKB_KEY_d,           spawn,            {.v = menucmd} },
 	{ MODKEY,                    XKB_KEY_Return,      spawn,            {.v = termcmd} },
+	{ MODKEY,		     XKB_KEY_s,	          spawn,            {.v = screenshot} },
 	{ MODKEY,                    XKB_KEY_b,           togglebar,        {0} },
 	{ MODKEY,                    XKB_KEY_j,           focusstack,       {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,           focusstack,       {.i = -1} },
@@ -151,6 +163,22 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_p,           incnmaster,       {.i = -1} },
 	{ MODKEY,                    XKB_KEY_h,           setmfact,         {.f = -0.05f} },
 	{ MODKEY,                    XKB_KEY_l,           setmfact,         {.f = +0.05f} },
+	{ MODKEY|WLR_MODIFIER_LOGO,       XKB_KEY_h,         incgaps,       {.i = +1 } },
+	{ MODKEY|WLR_MODIFIER_LOGO,       XKB_KEY_l,         incgaps,       {.i = -1 } },
+	{ MODKEY|WLR_MODIFIER_LOGO|WLR_MODIFIER_SHIFT,   XKB_KEY_H,     incogaps,      {.i = +1 } },
+	{ MODKEY|WLR_MODIFIER_LOGO|WLR_MODIFIER_SHIFT,   XKB_KEY_L,     incogaps,      {.i = -1 } },
+	{ MODKEY|WLR_MODIFIER_LOGO|WLR_MODIFIER_CTRL,    XKB_KEY_h,     incigaps,      {.i = +1 } },
+	{ MODKEY|WLR_MODIFIER_LOGO|WLR_MODIFIER_CTRL,    XKB_KEY_l,     incigaps,      {.i = -1 } },
+	{ MODKEY|WLR_MODIFIER_LOGO,       XKB_KEY_0,         togglegaps,    {0} },
+	{ MODKEY|WLR_MODIFIER_LOGO|WLR_MODIFIER_SHIFT,   XKB_KEY_parenright,defaultgaps,    {0} },
+	{ MODKEY,                         XKB_KEY_y,         incihgaps,     {.i = +1 } },
+	{ MODKEY,                         XKB_KEY_o,         incihgaps,     {.i = -1 } },
+	{ MODKEY|WLR_MODIFIER_CTRL,       XKB_KEY_y,         incivgaps,     {.i = +1 } },
+	{ MODKEY|WLR_MODIFIER_CTRL,       XKB_KEY_o,         incivgaps,     {.i = -1 } },
+	{ MODKEY|WLR_MODIFIER_LOGO,       XKB_KEY_y,         incohgaps,     {.i = +1 } },
+	{ MODKEY|WLR_MODIFIER_LOGO,       XKB_KEY_o,         incohgaps,     {.i = -1 } },
+	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_Y,         incovgaps,     {.i = +1 } },
+	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_O,         incovgaps,     {.i = -1 } },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,      zoom,             {0} },
 	{ MODKEY,                    XKB_KEY_Tab,         view,             {0} },
 	{ MODKEY,                    XKB_KEY_q,           killclient,       {0} },
@@ -176,13 +204,11 @@ static const Key keys[] = {
 	TAGKEYS(          XKB_KEY_8, XKB_KEY_parenleft,                     7),
 	TAGKEYS(          XKB_KEY_9, XKB_KEY_parenright,                    8),
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_q,           quit,             {0} },
-
-	/* Ctrl-Alt-Backspace and Ctrl-Alt-Fx used to be handled by X server */
+	{ 0,                    XF86XK_AudioRaiseVolume, spawn,     {.v = volup} },
+	{ 0,                    XF86XK_AudioLowerVolume, spawn,     {.v = voldown} },
+	{ 0,                    XF86XK_AudioMute,        spawn,     {.v = volmute} },
 	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_Terminate_Server, quit, {0} },
-	/* Ctrl-Alt-Fx is used to switch to another VT, if you don't know what a VT is
-	 * do not remove them.
-	 */
-#define CHVT(n) { WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_XF86Switch_VT_##n, chvt, {.ui = (n)} }
+	#define CHVT(n) { WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_XF86Switch_VT_##n, chvt, {.ui = (n)} }
 	CHVT(1), CHVT(2), CHVT(3), CHVT(4), CHVT(5), CHVT(6),
 	CHVT(7), CHVT(8), CHVT(9), CHVT(10), CHVT(11), CHVT(12),
 };

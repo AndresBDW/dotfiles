@@ -1,3 +1,4 @@
 #!/bin/sh
 
 slstatus -s | dwl
+exit 1
