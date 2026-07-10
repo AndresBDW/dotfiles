@@ -20,7 +20,7 @@ static const unsigned int borderpx         = 1;  /* border pixel of windows */
 static const int showbar                   = 1; /* 0 means no bar */
 static const int topbar                    = 1; /* 0 means bottom bar */
 static const int centeredtitle             = 1; /* 1 means centered title */
-static const char *fonts[]                 = {"SFMono:size=10"};
+static const char *fonts[]                 = {"Lavender Nerd:size=10"};
 static const float rootcolor[]             = COLOR(0x000000ff);
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
 static const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f}; /* You can also use glsl colors */
@@ -144,7 +144,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "wmenu-run", "-N", "#191212", "-n", "#e7cfbb", "-S", "#914639", "-s", "#e7cfbb", "-l", "10", NULL };
+static const char *menucmd[] = { "wmenu-run", "-N", "#191212", "-n", "#e7cfbb", "-S", "#914639", "-s", "#e7cfbb", "-l", "10", "-f", "Lavender Nerd 10", NULL };
 static const char *volup[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
 static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
 static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };

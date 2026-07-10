@@ -17,21 +17,15 @@ if [[ ":$PATH:" != *":/home/diego/bin:"* ]]; then
     export PATH="$PATH:$HOME/bin"
 fi
 
-f() {
-    fff "$@"
-    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
-}
-
 alias ls='ls --color=auto --group-directories-first'
-alias qfetch='clear; qfetch'
-alias gfetch='clear; gfetch'
-alias vfetch='clear; vfetch'
-alias fastfetch='clear; fastfetch'
-alias xi='sudo xbps-install'
+alias gf='clear; gfetch'
+alias vf='clear; vfetch'
+alias ff='clear; fastfetch'
+alias xi='sudo xbps-install -S'
 alias xu='sudo xbps-install -Su'
 alias xr='sudo xbps-remove'
 alias xo='sudo xbps-remove -o'
-alias xs='sudo xbps-query -Rs'
+alias xs='xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
 alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
 
