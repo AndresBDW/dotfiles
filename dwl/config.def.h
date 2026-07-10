@@ -26,9 +26,9 @@ static const float rootcolor[]             = COLOR(0x000000ff);
 static const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f}; /* You can also use glsl colors */
 static uint32_t colors[][3]                = {
 	/*               fg          bg          border    */
-	[SchemeNorm] = { 0xffffffff, 0x000000ff, 0x000000ff },
-	[SchemeSel]  = { 0xffffffff, 0xFE9055ff, 0xFE9055ff },
-	[SchemeUrg]  = { 0xffffffff, 0xff0000ff, 0xff0000ff },
+	[SchemeNorm] = { 0xe7cfbbff, 0x191212ff, 0xa19082ff },
+	[SchemeSel]  = { 0xe7cfbbff, 0xB64636ff, 0xe7cfbbff },
+	[SchemeUrg]  = { 0xe7cfbbff, 0x914639ff, 0x914639ff },
 };
 
 /* tagging */
@@ -144,7 +144,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "wmenu-run", "-N", "#000000", "-n", "#bbbbbb", "-S", "#FE9055", "-s", "#ffffff", "-l", "10", NULL };
+static const char *menucmd[] = { "wmenu-run", "-N", "#191212", "-n", "#e7cfbb", "-S", "#914639", "-s", "#e7cfbb", "-l", "10", NULL };
 static const char *volup[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
 static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
 static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
