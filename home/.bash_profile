@@ -3,5 +3,5 @@
 # Get the aliases and functions
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
-printf 'start wayland? '
-! read -r || exec dwl-start 
+printf 'start dwm? '
+! read -r || exec startx >/dev/null 2>&1 

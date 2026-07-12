@@ -1,16 +1,18 @@
 #!/bin/sh
 
-cp ~/src/dwl/config.def.h ./dwl/config.def.h
-cp ~/src/dwl/*.patch ./dwl/ 2>/dev/null
-cp ~/src/dwl/*.diff ./dwl/ 2>/dev/null
+cp ~/src/dwm/config.def.h ./dwm/config.def.h
+cp ~/src/dwm/*.patch ./dwm/patches 2>/dev/null
+cp ~/src/dwm/*.diff ./dwm/patches 2>/dev/null
 cp ~/src/slstatus/config.def.h ./slstatus/config.def.h
 cp ~/src/slstatus/*.patch ./slstatus/ 2>/dev/null
 cp ~/src/slstatus/*.diff ./slstatus/ 2>/dev/null
-cp ~/.config/foot/foot.ini ./foot/foot.ini
+cp ~/src/st/config.def.h ./st
+cp ~/src/st/patches/*.diff ./st/patches
+cp ~/src/st/patches/*.patch ./st/patches
 cp ~/.bashrc ./home/.bashrc
 cp ~/.bash_profile ./home/.bash_profile
 cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs
 cp ~/.vimrc ./vim/.vimrc
 cp ~/.config/okpal . -r
 rm ./wallpaper.jpg 2>/dev/null; cp ~/imagenes/wallpaper.png ./wallpaper.png 2>/dev/null|| rm ./wallpaper.png 2>/dev/null; cp ~/imagenes/wallpaper.jpg ./wallpaper.jpg 2>/dev/null
-cp ~/bin/dwl-start .
+cp ~/.xinitrc ./home

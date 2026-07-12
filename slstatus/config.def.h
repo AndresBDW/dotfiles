@@ -70,9 +70,9 @@ static const char unknown_str[] = "n/a";
 
 static const struct arg args[] = {
 	/* function format          argument */
-	{ backlight_perc, " backlight: %s | ", "amdgpu_bl0" },
-	{ battery_perc,      "battery: %s%% | ",         "BAT0" },
-	{ ram_used,          "ram: %s | ",    NULL },
-	{ wifi_essid,        "wifi: %s | ",     "wlp3s0" },
-	{ datetime,          "%s",           "%F %T" },
+	{ backlight_perc, " [ %s] ", "amdgpu_bl0" },
+	{ battery_perc,      "[ %s%%] ",         "BAT0" },
+	{ ram_used,          "[ %s] ",    NULL },
+	{ wifi_essid,        "[ %s] ",     "wlp3s0" },
+	{ datetime,          "[%s]",           "%F %T" },
 };
