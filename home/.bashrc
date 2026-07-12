@@ -35,7 +35,6 @@ export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS="-j8"
 export EDITOR="vim"
 export VISUAL="vim"
-export YACC=byacc
 export GTK_THEME="Adwaita:dark"
 export PF_INFO="ascii title os host kernel uptime pkgs memory wm shell editor palette"
 export BROWSER="firefox"
