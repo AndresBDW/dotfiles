@@ -27,7 +27,7 @@ alias xr='sudo xbps-remove'
 alias xo='sudo xbps-remove -o'
 alias xs='xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
-alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
+#alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
 
 export PS1="-> "
 export CFLAGS="-O3 -pipe -march=native"
@@ -40,4 +40,4 @@ export GTK_THEME="Adwaita:dark"
 export PF_INFO="ascii title os host kernel uptime pkgs memory wm shell editor palette"
 export BROWSER="firefox"
 
-(cat ~/.config/okpal/sequences 2>/dev/null &)
+#(cat ~/.config/okpal/sequences 2>/dev/null &)
