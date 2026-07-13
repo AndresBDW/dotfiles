@@ -27,6 +27,7 @@ alias xr='sudo xbps-remove'
 alias xo='sudo xbps-remove -o'
 alias xs='xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
+alias copiar='xclip -selection clipboard'
 #alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
 
 export PS1="-> "

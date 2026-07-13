@@ -14,22 +14,26 @@ static const char *fonts[]             = {
 	"TerminessTTF Nerd Font:style=Bold:pixelsize=18:antialias=true:autohint=true",
 	"JoyPixels:style=Bold:pixelsize=16:antialias=true:autohint=true"
 };
-/*static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";*/
-static const char norm_fg[] = "#dddfff";
+/*static const char norm_fg[] = "#dddfff";
 static const char norm_bg[] = "#000000";
 static const char norm_border[] = "#444444";
 static const char sel_fg[] = "#ffffff";
 static const char sel_bg[] = "#000000";
 static const char sel_border[] = "#000000";
+static const char norm_fg[] = "#d1d9f6";
+static const char norm_bg[] = "#0a070a";
+static const char norm_border[] = "#9297ac";
+static const char sel_fg[] = "#d1d9f6";
+static const char sel_bg[] = "#A97CA8";
+static const char sel_border[] = "#d1d9f6";
+
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
+	                 fg         bg         border    
 	[SchemeNorm] = { norm_fg,   norm_bg,   norm_border }, // unfocused wins
 	[SchemeSel]  = { sel_fg,    sel_bg,    sel_border },  // the focused win
 };
+*/
+#include "/home/diego/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -99,6 +103,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },

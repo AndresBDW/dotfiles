@@ -7,3 +7,4 @@ picom &
 slstatus &
 pipewire &
 exec dwm
+#exec vxwm

@@ -78,18 +78,10 @@ rules: (
         blur-background = false;
     },
     {
-        match = "class_g = 'slop'";
+        match = "class_g = 'maim'";
         blur-background = false;
-	shadow = false;
-	fade = false;
-    },
-
-	# {
-		# match = "class_g = 'vxwm'";
-		# corner-radius = 6;
-    # blur-background = false;
-	# },
-
+    }
+);
 
 # Slide Open/Close
 # @include "animations/close/slide.conf"
@@ -131,4 +123,3 @@ rules: (
 # @include "animations/tag/slidefade/overshoot/tag-bottom-to-up.conf"
 #
 # @include "animations/tag/normal.conf"
-)

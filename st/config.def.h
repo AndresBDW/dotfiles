@@ -1,6 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "colors/stuck.h"
+/*#include "colors/stuck.h"*/
+#include "/home/diego/.cache/wal/colors-wal-st.h"
 
 /*
  * appearance
