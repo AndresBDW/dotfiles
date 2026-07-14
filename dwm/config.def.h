@@ -14,26 +14,20 @@ static const char *fonts[]             = {
 	"TerminessTTF Nerd Font:style=Bold:pixelsize=18:antialias=true:autohint=true",
 	"JoyPixels:style=Bold:pixelsize=16:antialias=true:autohint=true"
 };
-/*static const char norm_fg[] = "#dddfff";
+static const char norm_fg[] = "#dddfff";
 static const char norm_bg[] = "#000000";
 static const char norm_border[] = "#444444";
 static const char sel_fg[] = "#ffffff";
 static const char sel_bg[] = "#000000";
 static const char sel_border[] = "#000000";
-static const char norm_fg[] = "#d1d9f6";
-static const char norm_bg[] = "#0a070a";
-static const char norm_border[] = "#9297ac";
-static const char sel_fg[] = "#d1d9f6";
-static const char sel_bg[] = "#A97CA8";
-static const char sel_border[] = "#d1d9f6";
 
 static const char *colors[][3]      = {
-	                 fg         bg         border    
+	/*               fg         bg         border                          */
 	[SchemeNorm] = { norm_fg,   norm_bg,   norm_border }, // unfocused wins
 	[SchemeSel]  = { sel_fg,    sel_bg,    sel_border },  // the focused win
 };
-*/
-#include "/home/diego/.cache/wal/colors-wal-dwm.h"
+
+
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
