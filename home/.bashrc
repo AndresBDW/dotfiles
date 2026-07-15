@@ -18,6 +18,7 @@ if [[ ":$PATH:" != *":/home/diego/bin:"* ]]; then
 fi
 
 alias ls='ls --color=auto --group-directories-first'
+alias grep='grep --color=auto'
 alias gf='clear; gfetch'
 alias vf='clear; vfetch'
 alias ff='clear; fastfetch'
@@ -29,6 +30,7 @@ alias xs='xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
 alias copiar='xclip -selection clipboard'
 alias clock='tty-clock -Ssc'
+alias cmatrix='cmatrix -u 10 -B -f'
 alias uw='xwallpaper --center /home/diego/imagenes/wallpaper.png'
 
 export PS1="➜ "
