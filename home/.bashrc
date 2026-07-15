@@ -31,7 +31,7 @@ alias copiar='xclip -selection clipboard'
 alias clock='tty-clock -Ssc'
 alias uw='xwallpaper --center /home/diego/imagenes/wallpaper.png'
 
-export PS1="-> "
+export PS1="➜ "
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS="-j8"

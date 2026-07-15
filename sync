@@ -1,13 +1,6 @@
 #!/bin/sh
 
-cp ~/src/dwm/config.def.h ./dwm/config.def.h 2>/dev/null
-rm ./dwm/patches/* 2>/dev/null
-cp ~/src/dwm/*.patch ./dwm/patches 2>/dev/null
-cp ~/src/dwm/*.diff ./dwm/patches 2>/dev/null
-cp ~/src/slstatus/config.def.h ./slstatus/config.def.h 2>/dev/null
-rm ./slstatus/patches/* 2>/dev/null
-cp ~/src/slstatus/*.patch ./slstatus/patches 2>/dev/null
-cp ~/src/slstatus/*.diff ./slstatus/patches 2>/dev/null
+cp ~/src/sowm-extended/config.def.h ./sowm/ 2>/dev/null
 cp ~/src/st/config.def.h ./st 2>/dev/null
 rm ./st/patches/* 2>/dev/null
 cp ~/src/st/patches/*.diff ./st/patches 2>/dev/null

@@ -7,4 +7,5 @@ xwallpaper --center /home/diego/imagenes/wallpaper.png &
 xclip &
 slstatus &
 pipewire &
-exec dwm
+# exec dwm
+exec sowm
