@@ -28,7 +28,8 @@ alias xo='sudo xbps-remove -o'
 alias xs='xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
 alias copiar='xclip -selection clipboard'
-#alias reset='reset; cat ~/.config/okpal/sequences 2>/dev/null'
+alias clock='tty-clock -Ssc'
+alias uw='xwallpaper --center /home/diego/imagenes/wallpaper.png'
 
 export PS1="-> "
 export CFLAGS="-O3 -pipe -march=native"
@@ -39,5 +40,3 @@ export VISUAL="vim"
 export GTK_THEME="Adwaita:dark"
 export PF_INFO="ascii title os host kernel uptime pkgs memory wm shell editor palette"
 export BROWSER="firefox"
-
-#(cat ~/.config/okpal/sequences 2>/dev/null &)

@@ -8,12 +8,16 @@ static const unsigned int gappx     = 10;       /* default gap between windows i
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-/*static const char *fonts[]          = { "Gallant12:size=12" };*/
-static const char dmenufont[]       = "TerminessTTF Nerd Font:style=Bold:pixelsize=18:antialias=true:autohint=true";
+/*static const char dmenufont[]       = "TerminessTTF Nerd Font:style=Bold:pixelsize=18:antialias=true:autohint=true";
 static const char *fonts[]             = {
 	"TerminessTTF Nerd Font:style=Bold:pixelsize=18:antialias=true:autohint=true",
 	"JoyPixels:style=Bold:pixelsize=16:antialias=true:autohint=true"
+};*/
+static const char dmenufont[]          = "SFMono:style=Regular:pixelsize=16:antialias=true:autohint=true";
+static const char *fonts[]             = {
+	"SFMono:style=Regular:pixelsize=16:antialias=true:autohint=true",
 };
+
 static const char norm_fg[] = "#dddfff";
 static const char norm_bg[] = "#000000";
 static const char norm_border[] = "#444444";

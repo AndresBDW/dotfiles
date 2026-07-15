@@ -7,13 +7,14 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font    = "TerminessTTF Nerd Font:style=Bold:pixelsize=18:antialias=true:autohint=true";
+static char *font    = "SFMono:style=Regular:pixelsize=16:antialias=true:autohint=true";
+// static char *font    = "TerminessTTF Nerd Font:style=Bold:pixelsize=18:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 	"JoyPixels:style=Regular:pixelsize=18:antialias=true:autohint=true",
 };
 
-static int borderpx  = 0;
+static int borderpx  = 33;
 
 /*
  * What program is execed by st depends of these precedence rules:
