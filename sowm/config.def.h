@@ -3,9 +3,10 @@
 
 #define MOD Mod4Mask
 
-const char* menu[]    = {"dmenu_run",      0};
-const char* term[]    = {"st",             0};
-const char* scrot[]   = {"scr",            0};
+const char* menu[]    = {"dmenu_run",           0};
+const char* term[]    = {"st",                  0};
+const char* scrot[]   = {"scr", "full",         0};
+const char* scrotg[]  = {"scr", "geometry",     0};
 const char* voldown[] = {"vol", "down",         0};
 const char* volup[]   = {"vol", "up",           0};
 const char* volmute[] = {"vol", "toggle",       0};
@@ -15,9 +16,10 @@ static struct key keys[] = {
     {MOD,      XK_c,   win_center, {0}},
     {MOD,      XK_f,   win_fs,     {0}},
 
-    {MOD, XK_d,      run, {.com = menu}},
-    {MOD, XK_p,      run, {.com = scrot}},
-    {MOD, XK_Return, run, {.com = term}},
+    {MOD,           XK_d,      run, {.com = menu}},
+    {MOD,           XK_s,      run, {.com = scrot}},
+    {MOD|ShiftMask, XK_s,      run, {.com = scrotg}},
+    {MOD,           XK_Return, run, {.com = term}},
 
     {0,   XF86XK_AudioLowerVolume,  run, {.com = voldown}},
     {0,   XF86XK_AudioRaiseVolume,  run, {.com = volup}},

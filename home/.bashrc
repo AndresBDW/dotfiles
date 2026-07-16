@@ -29,8 +29,7 @@ alias xo='sudo xbps-remove -o'
 alias xs='xbps-query -Rs'
 alias gj='git pull; git add .; git commit -m "docs: update"; git push'
 alias copiar='xclip -selection clipboard'
-alias clock='tty-clock -Ssc'
-alias cmatrix='cmatrix -u 10 -B -f'
+alias cleankernel='sudo vkpurge rm all'
 alias uw='xwallpaper --center /home/diego/imagenes/wallpaper.png'
 
 export PS1="➜ "
