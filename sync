@@ -1,16 +1,8 @@
 #!/bin/sh
 
-cp ~/src/sowm-extended/config.def.h ./sowm/ 2>/dev/null
-cp ~/src/st/config.def.h ./st 2>/dev/null
-rm ./st/patches/* 2>/dev/null
-cp ~/src/st/patches/*.diff ./st/patches 2>/dev/null
-cp ~/src/st/patches/*.patch ./st/patches 2>/dev/null
-cp ~/.bashrc ./home/.bashrc 2>/dev/null
-cp ~/.bash_profile ./home/.bash_profile 2>/dev/null
+cp ~/.config/foot/foot.ini ./foot/
+cp ~/.config/sway/config ./sway/
+cp ~/.fonts/* ./fonts
 cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs 2>/dev/null
 cp ~/.vimrc ./vim/.vimrc 2>/dev/null
-#cp ~/.config/okpal . -r 2>/dev/null
-cp ~/.config/picom . -r 2>/dev/null
 rm ./wallpaper.jpg 2>/dev/null; cp ~/imagenes/wallpaper.png ./wallpaper.png 2>/dev/null|| rm ./wallpaper.png 2>/dev/null; cp ~/imagenes/wallpaper.jpg ./wallpaper.jpg 2>/dev/null
-cp ~/.xinitrc ./home 2>/dev/null
-cp ~/.fonts/* ./fonts 2>/dev/null
