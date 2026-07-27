@@ -6,5 +6,4 @@ rm ./fonts/*
 cp ~/.fonts/* ./fonts
 cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs 2>/dev/null
 cp ~/.vimrc ./vim/.vimrc 2>/dev/null
-cp -r ~/.config/okpal .
-rm ./wallpaper.jpg 2>/dev/null; cp ~/imagenes/wallpaper.png ./wallpaper.png 2>/dev/null || rm ./wallpaper.png 2>/dev/null; cp ~/imagenes/wallpaper.jpg ./wallpaper.jpg 2>/dev/null
+cp ~/imagenes/wallpapers/* ./wallpapers/
