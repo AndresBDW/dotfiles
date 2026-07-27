@@ -1,5 +1,2 @@
 XDG_DOWNLOAD_DIR="$HOME/descargas"
-XDG_DOCUMENTS_DIR="$HOME/documentos"
 XDG_PICTURES_DIR="$HOME/imagenes"
-XDG_VIDEOS_DIR="$HOME/videos"
-XDG_MUSIC_DIR="$HOME/musica"

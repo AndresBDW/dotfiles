@@ -30,7 +30,6 @@ bindsym XF86MonBrightnessDown exec bri -
 bindsym $mod+b splith
 bindsym $mod+v splitv
 bindsym $mod+f floating toggle
-bindsym $mod+g fullscreen
 
 input type:keyboard {
     repeat_delay 200
@@ -38,4 +37,4 @@ input type:keyboard {
     xkb_layout "latam"
 }
 
-exec_always wbg ~/imagenes/wallpaper.png
+exec_always wbg ~/imagenes/wallpapers/luna.png
