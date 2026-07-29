@@ -21,6 +21,7 @@ prompt() {
 }
 
 link() {
+	cp ~/imagenes/capturas/current.png ./screenshot.png
 	cp ~/.config/foot/foot.ini ./foot/
 	cp ~/.config/sway/config ./sway/
 	rm ./fonts/*
