@@ -26,9 +26,10 @@ link() {
 	cp ~/.config/sway/config ./sway/
 	rm ./fonts/*
 	cp ~/.fonts/* ./fonts
-	cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs 2>/dev/null
-	cp ~/.vimrc ./vim/.vimrc 2>/dev/null
-	cp ~/imagenes/wallpapers/* ./wallpapers/
+	cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs
+	cp ~/.vimrc ./vim/.vimrc 
+	cp ~/imagenes/wallpapers/* ./wallpapers
+	cp -r ~/.config/okpal/* ./okpal
 }
 
 install() {
@@ -38,6 +39,7 @@ install() {
 	cp -p ./user-dirs.dirs/user-dirs.dirs ~/.config/user-dirs.dirs
 	cp -p ./vim/.vimrc ~/.vimrc
 	cp -p ./wallpapers/* ~/imagenes/wallpapers
+	cp -p -r ./okpal/* ~/.config/okpal
 }
 
 main() {
