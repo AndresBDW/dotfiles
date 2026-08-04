@@ -42,11 +42,23 @@ install() {
 	cp -p -r ./okpal/* ~/.config/okpal
 }
 
+g() {
+	git pull
+	git add .
+	git commit -m "docs: update"
+	git push origin --tags
+	git push
+}
+
 main() {
 	if [ "$1" = link ]; then
 		log linking dotfiles, overwritting old dotfiles.
 		link
 		log dotfiles linked successfully
+
+		log upload changes to repo?
+		prompt
+		g
 	elif [ "$1" = install ]; then
 		war you are about to install the dotfiles, if you have dotfiles in sway, foot, vim, etc, these will be overwritten.
 		prompt
