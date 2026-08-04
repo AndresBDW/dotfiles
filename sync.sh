@@ -28,18 +28,25 @@ link() {
 	cp ~/.fonts/* ./fonts
 	cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs
 	cp ~/.vimrc ./vim/.vimrc 
+	rm ./wallpapers/*
 	cp ~/imagenes/wallpapers/* ./wallpapers
+	rm -r ./okpal/*
 	cp -r ~/.config/okpal/* ./okpal
 }
 
 install() {
-	cp -p ./foot/foot.ini ~/.config/foot/foot.ini
-	cp -p ./sway/config ~/.config/sway/config
-	cp -p ./fonts/* ~/.fonts
-	cp -p ./user-dirs.dirs/user-dirs.dirs ~/.config/user-dirs.dirs
-	cp -p ./vim/.vimrc ~/.vimrc
-	cp -p ./wallpapers/* ~/imagenes/wallpapers
-	cp -p -r ./okpal/* ~/.config/okpal
+	mkdir -p ~/.config/foot
+	cp ./foot/foot.ini ~/.config/foot/foot.ini
+	mkdir -p ~/.config/sway
+	cp ./sway/config ~/.config/sway/config
+	mkdir -p ~/.fonts
+	cp ./fonts/* ~/.fonts
+	cp ./user-dirs.dirs/user-dirs.dirs ~/.config/user-dirs.dirs
+	cp ./vim/.vimrc ~/.vimrc
+	mkdir -p ~/imagenes/wallpapers
+	cp ./wallpapers/* ~/imagenes/wallpapers
+	mkdir -p ~/.config/okpal
+	cp -r ./okpal/* ~/.config/okpal
 }
 
 g() {
@@ -66,7 +73,6 @@ main() {
 		else
 			err "dotfiles not installed. Check 'log.log' for details."
 		fi
-		log dotfiles installed sucessfully
 	else
 		printf "use: sync.sh <install/link>\n"
 	fi
