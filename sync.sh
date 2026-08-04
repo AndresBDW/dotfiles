@@ -46,7 +46,6 @@ g() {
 	git pull
 	git add .
 	git commit -m "docs: update"
-	git push origin --tags
 	git push
 }
 
