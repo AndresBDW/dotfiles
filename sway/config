@@ -31,6 +31,7 @@ bindsym XF86Sleep exec zzz
 bindsym $mod+b splith
 bindsym $mod+v splitv
 bindsym $mod+f floating toggle
+bindsym $mod+f fullscreen
 
 input type:keyboard {
     repeat_delay 200
@@ -38,5 +39,4 @@ input type:keyboard {
     xkb_layout "latam"
 }
 
-exec_always wbg -s ~/imagenes/wallpapers/wal54.jpg
-
+exec_always wbg -s ~/imagenes/wallpapers/wal05.jpg
