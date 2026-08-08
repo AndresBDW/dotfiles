@@ -21,12 +21,8 @@ prompt() {
 }
 
 link() {
-	cp ~/imagenes/capturas/current.png ./screenshot.png
 	cp ~/.config/foot/foot.ini ./foot/
 	cp ~/.config/sway/config ./sway/
-	rm ./fonts/*
-	cp ~/.fonts/* ./fonts
-	cp ~/.config/user-dirs.dirs ./user-dirs.dirs/user-dirs.dirs
 	cp ~/.vimrc ./vim/.vimrc 
 	rm ./wallpapers/*
 	cp ~/imagenes/wallpapers/* ./wallpapers
@@ -39,9 +35,6 @@ install() {
 	cp ./foot/foot.ini ~/.config/foot/foot.ini
 	mkdir -p ~/.config/sway
 	cp ./sway/config ~/.config/sway/config
-	mkdir -p ~/.fonts
-	cp ./fonts/* ~/.fonts
-	cp ./user-dirs.dirs/user-dirs.dirs ~/.config/user-dirs.dirs
 	cp ./vim/.vimrc ~/.vimrc
 	mkdir -p ~/imagenes/wallpapers
 	cp ./wallpapers/* ~/imagenes/wallpapers
