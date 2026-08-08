@@ -31,7 +31,7 @@ bindsym XF86Sleep exec zzz
 bindsym $mod+b splith
 bindsym $mod+v splitv
 bindsym $mod+f floating toggle
-bindsym $mod+f fullscreen
+bindsym $mod+g fullscreen
 
 input type:keyboard {
     repeat_delay 200
