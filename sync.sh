@@ -58,7 +58,7 @@ g() {
 
 main() {
 	if [ "$1" = link ]; then
-		log linking dotfiles, overwritting old dotfiles.
+		log linking dotfiles, overwritting old dotfiles
 		link
 		log dotfiles linked successfully
 
@@ -66,12 +66,12 @@ main() {
 		prompt
 		g
 	elif [ "$1" = install ]; then
-		war you are about to install the dotfiles, if you have dotfiles in sway, foot, vim, etc, these will be overwritten.
+		war you are about to install the dotfiles, if you have dotfiles in sway, foot, vim, etc, these will be overwritten
 		prompt
 		if install > log.log 2>&1; then
 			log "dotfiles installed successfully"
 		else
-			err "dotfiles not installed. Check 'log.log' for details."
+			err "dotfiles not installed. Check 'log.log' for details"
 		fi
 	else
 		printf "use: sync.sh <install/link>\n"
