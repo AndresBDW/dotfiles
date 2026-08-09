@@ -28,6 +28,9 @@ link() {
 	cp ~/imagenes/wallpapers/* ./wallpapers
 	rm -r ./okpal/*
 	cp -r ~/.config/okpal/* ./okpal
+	cp ~/.profile ./home/
+	cp ~/.rc ./home/
+	cp ~/.asoundrc ./home/
 }
 
 install() {
@@ -40,6 +43,7 @@ install() {
 	cp ./wallpapers/* ~/imagenes/wallpapers
 	mkdir -p ~/.config/okpal
 	cp -r ./okpal/* ~/.config/okpal
+	cp ./home/.* ~
 }
 
 g() {
