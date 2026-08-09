@@ -1,4 +1,4 @@
 read -r _b < /home/diego/.config/okpal/sequences
-# read -r _b < /home/diego/.cache/wal/sequences
+read -r _b < /home/diego/.cache/wal/sequences
 printf '%s' "$_b"
 unset _b 
