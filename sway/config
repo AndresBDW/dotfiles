@@ -39,4 +39,4 @@ input type:keyboard {
     xkb_layout "latam"
 }
 
-exec_always wbg -s ~/imagenes/wallpapers/wal56.jpg
+exec_always wbg -s ~/imagenes/wallpapers/wal49.jpg
