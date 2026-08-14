@@ -1,3 +1,3 @@
-read -r _b < /home/diego/.config/okpal/sequences
+read -r _b < /home/diego/.cache/current-palette
 printf '%s' "$_b"
 unset _b 
