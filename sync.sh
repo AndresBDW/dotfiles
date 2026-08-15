@@ -26,8 +26,6 @@ link() {
 	cp ~/.vimrc ./vim/.vimrc 
 	rm ./wallpapers/*
 	cp ~/imagenes/wallpapers/* ./wallpapers
-	rm -r ./okpal/*
-	cp -r ~/.config/okpal/* ./okpal
 	cp ~/.profile ./home/
 	cp ~/.rc ./home/
 	cp ~/.asoundrc ./home/
@@ -41,8 +39,6 @@ install() {
 	cp ./vim/.vimrc ~/.vimrc
 	mkdir -p ~/imagenes/wallpapers
 	cp ./wallpapers/* ~/imagenes/wallpapers
-	mkdir -p ~/.config/okpal
-	cp -r ./okpal/* ~/.config/okpal
 	cp ./home/.* ~
 }
 
